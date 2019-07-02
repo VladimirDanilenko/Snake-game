@@ -1,0 +1,161 @@
+h1{
+	text-align:center;
+}
+.table{
+	display:table;
+	margin-left:auto;
+	margin-right:auto;
+}
+.tableRow{
+	display:table-row;
+}
+.td{
+	display: table-cell;
+	width:30px;
+	height:30px;
+	background-color:#00A03E;
+	border:black 1px dashed;
+}
+
+.berry{
+	background-image:url("images/Berry.png");
+	display: table-cell;
+	width:30px;
+	height:30px;
+	border:black 1px dashed;
+}
+
+.snake{
+	display: table-cell;
+	width:30px;
+	height:30px;
+	border:black 1px dashed;
+	background: rgb(228,49,49);
+	background: radial-gradient(circle, rgba(228,49,49,1) 0%, rgba(86,134,96,1) 55%);
+}
+
+
+.scorePanel{
+	position: absolute;
+	left: 740px;
+	top:55px;
+	text-decoration: underline;
+	font-weight: bold;
+	font-size:20px;
+	font-family: Verdana,Arial,sans-serif;
+}
+
+#infoPanel{
+	position: absolute;
+	left: 1090px;
+	top:53px;
+	font-family: Arial,sans-serif;
+	font-size: 25px;
+	}
+#gameOver{
+	color:red;
+	z-index: 2;
+    position:absolute;
+    top:368px;
+    left:868px;
+    text-shadow: black 0 0 4px;
+    font-size:30px;
+}
+
+input{
+	height:50px;
+	width:100px;
+	font-size:30px;
+}
+#easy{
+	color:green;
+}
+#medium{
+	width:150px;
+	color:yellow;
+	text-shadow: black 0 0 4px;
+}
+#hard{
+	color:red;
+}
+.options{
+	position:absolute;
+	top:730px;
+	left:860px;
+	vertical-align: middle;
+	/*top:300px;
+	left:1075px;
+	-webkit-transform: rotate(90deg);*/
+}
+
+#start{
+	position:absolute;
+	top:290px;
+	left:910px;
+	height:100px;
+}
+
+
+#restart{
+	position:absolute;
+	top:730px;
+	left:710px;
+}
+
+.snakeHead{
+	background-image: url(images/SnakeHead.png);
+	display: table-cell;
+	width:30px;
+	height:30px;
+	border:black 1px dashed;
+}
+.thorn{
+	background-image:url(images/Thorn.png);
+	display: table-cell;
+	width:30px;
+	height:30px;
+	border:black 1px dashed;
+}
+
+.record{
+	position: absolute;
+	left: 650px;
+	top:10px;
+	font-weight: bold;
+	font-size:30px;
+	font-family: Verdana,Arial,sans-serif;
+}
+.pseudoThorn{
+    background-image:url(images/pseudoThorn.png);
+	display: table-cell;
+	width:30px;
+	height:30px;
+	border:black 1px dashed;
+}
+.holes{
+	background-image:url(images/hole.png);
+	display: table-cell;
+	width:30px;
+	height:30px;
+	border:black 1px dashed;
+}
+.superBerry{
+	background-image:url(images/superBerry.png);
+	display: table-cell;
+	width:30px;
+	height:30px;
+	border:black 1px dashed;
+}
+#gameOverInfoPanel{
+	position:absolute;
+	top:150px;
+	left:150px;
+	border: outset 1px gray;
+	padding:5px;
+	list-style-type: none;
+}
+.gameOverInfoPanelItem{
+	font-size:20px;
+	font-weight:bold;
+	font-family: Arial, sans-serif;
+}

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Snake</title>
+	<link rel="stylesheet" href="css20x20.css">
+</head>
+<body>
+	<h1>Snake20x20</h1>
+<div class="record">Record: <span id="record">0</span></div>
+<div class="scorePanel">Score: <span id="score">0</span></div>
+<span id="infoPanel"></span>
+
+<ul id="gameOverInfoPanel">
+	<li class="gameOverInfoPanelItem">You ate <span id="berrysEaten">0</span> berrys,</li>
+   	<li class="gameOverInfoPanelItem">ate  <span id="superBerrysEaten">0</span> super berrys,</li>
+   	<li class="gameOverInfoPanelItem">and ate <span id="pseudoThornsEaten">0</span> pseudo thorns.</li>
+   	<li class="gameOverInfoPanelItem">You went through hole <span id="passesThroughHole">0</span> times,</li>
+   	<li class="gameOverInfoPanelItem">and you lose your tail   <span id="tailLoses">0</span> times.</li>
+</ul>
+
+<div class="table">
+	<div class="tableRow">
+		<div class="td" id="000"></div>
+		<div class="td" id="001"></div>
+		<div class="td" id="002"></div>
+		<div class="td" id="003"></div>
+		<div class="td" id="004"></div>
+		<div class="td" id="005"></div>
+		<div class="td" id="006"></div>
+		<div class="td" id="007"></div>
+		<div class="td" id="008"></div>
+		<div class="td" id="009"></div>
+		<div class="td" id="010"></div>
+		<div class="td" id="011"></div>
+		<div class="td" id="012"></div>
+		<div class="td" id="013"></div>
+		<div class="td" id="014"></div>
+		<div class="td" id="015"></div>
+		<div class="td" id="016"></div>
+		<div class="td" id="017"></div>
+		<div class="td" id="018"></div>
+		<div class="td" id="019"></div>
+	</div>
+	<div class="tableRow">
+		<div class="td" id="020"></div>
+		<div class="td" id="021"></div>
+		<div class="td" id="022"></div>
+		<div class="td" id="023"></div>
+		<div class="td" id="024"></div>
+		<div class="td" id="025"></div>
+		<div class="td" id="026"></div>
+		<div class="td" id="027"></div>
+		<div class="td" id="028"></div>
+		<div class="td" id="029"></div>
+		<div class="td" id="030"></div>
+		<div class="td" id="031"></div>
+		<div class="td" id="032"></div>
+		<div class="td" id="033"></div>
+		<div class="td" id="034"></div>
+		<div class="td" id="035"></div>
+		<div class="td" id="036"></div>
+		<div class="td" id="037"></div>
+		<div class="td" id="038"></div>
+		<div class="td" id="039"></div>
+	</div>
+	<div class="tableRow">
+		<div class="td" id="040"></div>
+		<div class="td" id="041"></div>
+		<div class="td" id="042"></div>
+		<div class="td" id="043"></div>
+		<div class="td" id="044"></div>
+		<div class="td" id="045"></div>
+		<div class="td" id="046"></div>
+		<div class="td" id="047"></div>
+		<div class="td" id="048"></div>
+		<div class="td" id="049"></div>
+		<div class="td" id="050"></div>
+		<div class="td" id="051"></div>
+		<div class="td" id="052"></div>
+		<div class="td" id="053"></div>
+		<div class="td" id="054"></div>
+		<div class="td" id="055"></div>
+		<div class="td" id="056"></div>
+		<div class="td" id="057"></div>
+		<div class="td" id="058"></div>
+		<div class="td" id="059"></div>
+	</div>
+	<div class="tableRow">
+		<div class="td" id="060"></div>
+		<div class="td" id="061"></div>
+		<div class="td" id="062"></div>
+		<div class="td" id="063"></div>
+		<div class="td" id="064"></div>
+		<div class="td" id="065"></div>
+		<div class="td" id="066"></div>
+		<div class="td" id="067"></div>
+		<div class="td" id="068"></div>
+		<div class="td" id="069"></div>
+		<div class="td" id="070"></div>
+		<div class="td" id="071"></div>
+		<div class="td" id="072"></div>
+		<div class="td" id="073"></div>
+		<div class="td" id="074"></div>
+		<div class="td" id="075"></div>
+		<div class="td" id="076"></div>
+		<div class="td" id="077"></div>
+		<div class="td" id="078"></div>
+		<div class="td" id="079"></div>
+	</div>
+	<div class="tableRow">
+		<div class="td" id="080"></div>
+		<div class="td" id="081"></div>
+		<div class="td" id="082"></div>
+		<div class="td" id="083"></div>
+		<div class="td" id="084"></div>
+		<div class="td" id="085"></div>
+		<div class="td" id="086"></div>
+		<div class="td" id="087"></div>
+		<div class="td" id="088"></div>
+		<div class="td" id="089"></div>
+		<div class="td" id="090"></div>
+		<div class="td" id="091"></div>
+		<div class="td" id="092"></div>
+		<div class="td" id="093"></div>
+		<div class="td" id="094"></div>
+		<div class="td" id="095"></div>
+		<div class="td" id="096"></div>
+		<div class="td" id="097"></div>
+		<div class="td" id="098"></div>
+		<div class="td" id="099"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="100"></div>
+			<div class="td" id="101"></div>
+			<div class="td" id="102"></div>
+			<div class="td" id="103"></div>
+			<div class="td" id="104"></div>
+			<div class="td" id="105"></div>
+			<div class="td" id="106"></div>
+			<div class="td" id="107"></div>
+			<div class="td" id="108"></div>
+			<div class="td" id="109"></div>
+			<div class="td" id="110"></div>
+			<div class="td" id="111"></div>
+			<div class="td" id="112"></div>
+			<div class="td" id="113"></div>
+			<div class="td" id="114"></div>
+			<div class="td" id="115"></div>
+			<div class="td" id="116"></div>
+			<div class="td" id="117"></div>
+			<div class="td" id="118"></div>
+			<div class="td" id="119"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="120"></div>
+			<div class="td" id="121"></div>
+			<div class="td" id="122"></div>
+			<div class="td" id="123"></div>
+			<div class="td" id="124"></div>
+			<div class="td" id="125"></div>
+			<div class="td" id="126"></div>
+			<div class="td" id="127"></div>
+			<div class="td" id="128"></div>
+			<div class="td" id="129"></div>
+			<div class="td" id="130"></div>
+			<div class="td" id="131"></div>
+			<div class="td" id="132"></div>
+			<div class="td" id="133"></div>
+			<div class="td" id="134"></div>
+			<div class="td" id="135"></div>
+			<div class="td" id="136"></div>
+			<div class="td" id="137"></div>
+			<div class="td" id="138"></div>
+			<div class="td" id="139"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="140"></div>
+			<div class="td" id="141"></div>
+			<div class="td" id="142"></div>
+			<div class="td" id="143"></div>
+			<div class="td" id="144"></div>
+			<div class="td" id="145"></div>
+			<div class="td" id="146"></div>
+			<div class="td" id="147"></div>
+			<div class="td" id="148"></div>
+			<div class="td" id="149"></div>
+			<div class="td" id="150"></div>
+			<div class="td" id="151"></div>
+			<div class="td" id="152"></div>
+			<div class="td" id="153"></div>
+			<div class="td" id="154"></div>
+			<div class="td" id="155"></div>
+			<div class="td" id="156"></div>
+			<div class="td" id="157"></div>
+			<div class="td" id="158"></div>
+			<div class="td" id="159"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="160"></div>
+			<div class="td" id="161"></div>
+			<div class="td" id="162"></div>
+			<div class="td" id="163"></div>
+			<div class="td" id="164"></div>
+			<div class="td" id="165"></div>
+			<div class="td" id="166"></div>
+			<div class="td" id="167"></div>
+			<div class="td" id="168"></div>
+			<div class="td" id="169"></div>
+			<div class="td" id="170"></div>
+			<div class="td" id="171"></div>
+			<div class="td" id="172"></div>
+			<div class="td" id="173"></div>
+			<div class="td" id="174"></div>
+			<div class="td" id="175"></div>
+			<div class="td" id="176"></div>
+			<div class="td" id="177"></div>
+			<div class="td" id="178"></div>
+			<div class="td" id="179"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="180"></div>
+			<div class="td" id="181"></div>
+			<div class="td" id="182"></div>
+			<div class="td" id="183"></div>
+			<div class="td" id="184"></div>
+			<div class="td" id="185"></div>
+			<div class="td" id="186"></div>
+			<div class="td" id="187"></div>
+			<div class="td" id="188"></div>
+			<div class="td" id="189"></div>
+			<div class="td" id="190"></div>
+			<div class="td" id="191"></div>
+			<div class="td" id="192"></div>
+			<div class="td" id="193"></div>
+			<div class="td" id="194"></div>
+			<div class="td" id="195"></div>
+			<div class="td" id="196"></div>
+			<div class="td" id="197"></div>
+			<div class="td" id="198"></div>
+			<div class="td" id="199"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="200"></div>
+			<div class="td" id="201"></div>
+			<div class="td" id="202"></div>
+			<div class="td" id="203"></div>
+			<div class="td" id="204"></div>
+			<div class="td" id="205"></div>
+			<div class="td" id="206"></div>
+			<div class="td" id="207"></div>
+			<div class="td" id="208"></div>
+			<div class="td" id="209"></div>
+			<div class="td" id="210"></div>
+			<div class="td" id="211"></div>
+			<div class="td" id="212"></div>
+			<div class="td" id="213"></div>
+			<div class="td" id="214"></div>
+			<div class="td" id="215"></div>
+			<div class="td" id="216"></div>
+			<div class="td" id="217"></div>
+			<div class="td" id="218"></div>
+			<div class="td" id="219"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="220"></div>
+			<div class="td" id="221"></div>
+			<div class="td" id="222"></div>
+			<div class="td" id="223"></div>
+			<div class="td" id="224"></div>
+			<div class="td" id="225"></div>
+			<div class="td" id="226"></div>
+			<div class="td" id="227"></div>
+			<div class="td" id="228"></div>
+			<div class="td" id="229"></div>
+			<div class="td" id="230"></div>
+			<div class="td" id="231"></div>
+			<div class="td" id="232"></div>
+			<div class="td" id="233"></div>
+			<div class="td" id="234"></div>
+			<div class="td" id="235"></div>
+			<div class="td" id="236"></div>
+			<div class="td" id="237"></div>
+			<div class="td" id="238"></div>
+			<div class="td" id="239"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="240"></div>
+			<div class="td" id="241"></div>
+			<div class="td" id="242"></div>
+			<div class="td" id="243"></div>
+			<div class="td" id="244"></div>
+			<div class="td" id="245"></div>
+			<div class="td" id="246"></div>
+			<div class="td" id="247"></div>
+			<div class="td" id="248"></div>
+			<div class="td" id="249"></div>
+			<div class="td" id="250"></div>
+			<div class="td" id="251"></div>
+			<div class="td" id="252"></div>
+			<div class="td" id="253"></div>
+			<div class="td" id="254"></div>
+			<div class="td" id="255"></div>
+			<div class="td" id="256"></div>
+			<div class="td" id="257"></div>
+			<div class="td" id="258"></div>
+			<div class="td" id="259"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="260"></div>
+			<div class="td" id="261"></div>
+			<div class="td" id="262"></div>
+			<div class="td" id="263"></div>
+			<div class="td" id="264"></div>
+			<div class="td" id="265"></div>
+			<div class="td" id="266"></div>
+			<div class="td" id="267"></div>
+			<div class="td" id="268"></div>
+			<div class="td" id="269"></div>
+			<div class="td" id="270"></div>
+			<div class="td" id="271"></div>
+			<div class="td" id="272"></div>
+			<div class="td" id="273"></div>
+			<div class="td" id="274"></div>
+			<div class="td" id="275"></div>
+			<div class="td" id="276"></div>
+			<div class="td" id="277"></div>
+			<div class="td" id="278"></div>
+			<div class="td" id="279"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="280"></div>
+			<div class="td" id="281"></div>
+			<div class="td" id="282"></div>
+			<div class="td" id="283"></div>
+			<div class="td" id="284"></div>
+			<div class="td" id="285"></div>
+			<div class="td" id="286"></div>
+			<div class="td" id="287"></div>
+			<div class="td" id="288"></div>
+			<div class="td" id="289"></div>
+			<div class="td" id="290"></div>
+			<div class="td" id="291"></div>
+			<div class="td" id="292"></div>
+			<div class="td" id="293"></div>
+			<div class="td" id="294"></div>
+			<div class="td" id="295"></div>
+			<div class="td" id="296"></div>
+			<div class="td" id="297"></div>
+			<div class="td" id="298"></div>
+			<div class="td" id="299"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="300"></div>
+			<div class="td" id="301"></div>
+			<div class="td" id="302"></div>
+			<div class="td" id="303"></div>
+			<div class="td" id="304"></div>
+			<div class="td" id="305"></div>
+			<div class="td" id="306"></div>
+			<div class="td" id="307"></div>
+			<div class="td" id="308"></div>
+			<div class="td" id="309"></div>
+			<div class="td" id="310"></div>
+			<div class="td" id="311"></div>
+			<div class="td" id="312"></div>
+			<div class="td" id="313"></div>
+			<div class="td" id="314"></div>
+			<div class="td" id="315"></div>
+			<div class="td" id="316"></div>
+			<div class="td" id="317"></div>
+			<div class="td" id="318"></div>
+			<div class="td" id="319"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="320"></div>
+			<div class="td" id="321"></div>
+			<div class="td" id="322"></div>
+			<div class="td" id="323"></div>
+			<div class="td" id="324"></div>
+			<div class="td" id="325"></div>
+			<div class="td" id="326"></div>
+			<div class="td" id="327"></div>
+			<div class="td" id="328"></div>
+			<div class="td" id="329"></div>
+			<div class="td" id="330"></div>
+			<div class="td" id="331"></div>
+			<div class="td" id="332"></div>
+			<div class="td" id="333"></div>
+			<div class="td" id="334"></div>
+			<div class="td" id="335"></div>
+			<div class="td" id="336"></div>
+			<div class="td" id="337"></div>
+			<div class="td" id="338"></div>
+			<div class="td" id="339"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="340"></div>
+			<div class="td" id="341"></div>
+			<div class="td" id="342"></div>
+			<div class="td" id="343"></div>
+			<div class="td" id="344"></div>
+			<div class="td" id="345"></div>
+			<div class="td" id="346"></div>
+			<div class="td" id="347"></div>
+			<div class="td" id="348"></div>
+			<div class="td" id="349"></div>
+			<div class="td" id="350"></div>
+			<div class="td" id="351"></div>
+			<div class="td" id="352"></div>
+			<div class="td" id="353"></div>
+			<div class="td" id="354"></div>
+			<div class="td" id="355"></div>
+			<div class="td" id="356"></div>
+			<div class="td" id="357"></div>
+			<div class="td" id="358"></div>
+			<div class="td" id="359"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="360"></div>
+			<div class="td" id="361"></div>
+			<div class="td" id="362"></div>
+			<div class="td" id="363"></div>
+			<div class="td" id="364"></div>
+			<div class="td" id="365"></div>
+			<div class="td" id="366"></div>
+			<div class="td" id="367"></div>
+			<div class="td" id="368"></div>
+			<div class="td" id="369"></div>
+			<div class="td" id="370"></div>
+			<div class="td" id="371"></div>
+			<div class="td" id="372"></div>
+			<div class="td" id="373"></div>
+			<div class="td" id="374"></div>
+			<div class="td" id="375"></div>
+			<div class="td" id="376"></div>
+			<div class="td" id="377"></div>
+			<div class="td" id="378"></div>
+			<div class="td" id="379"></div>
+	</div>
+	<div class="tableRow">
+			<div class="td" id="380"></div>
+			<div class="td" id="381"></div>
+			<div class="td" id="382"></div>
+			<div class="td" id="383"></div>
+			<div class="td" id="384"></div>
+			<div class="td" id="385"></div>
+			<div class="td" id="386"></div>
+			<div class="td" id="387"></div>
+			<div class="td" id="388"></div>
+			<div class="td" id="389"></div>
+			<div class="td" id="390"></div>
+			<div class="td" id="391"></div>
+			<div class="td" id="392"></div>
+			<div class="td" id="393"></div>
+			<div class="td" id="394"></div>
+			<div class="td" id="395"></div>
+			<div class="td" id="396"></div>
+			<div class="td" id="397"></div>
+			<div class="td" id="398"></div>
+			<div class="td" id="399"></div>
+	</div>
+	
+
+
+</div>
+
+<span id="gameOver"></span>
+
+<div class="bottomPanel">
+<div class="options">
+<input type="button" id="easy" value="easy">
+<input type="button" id="medium" value="medium" checked=""> 
+<input type="button" id="hard" value="hard"> 
+</div>
+<!--<input type="button" id="start" value="start">-->
+<input type="button" id="restart" value="restart">
+</div>
+
+	<script src="js20x20-2.js"></script>
+</body>
+</html>
